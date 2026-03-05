@@ -1,6 +1,7 @@
 package com.moonfazer.supersteel.registry;
 
 import net.minecraft.core.registries.Registries;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -18,6 +19,10 @@ public final class ModBlocks {
                     .strength(5.0F, 3_600_000.0F)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.METAL)));
+    public static final DeferredHolder<Block, Block> PLATINUM_ORE = BLOCKS.register("platinum_ore",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_ORE)));
+    public static final DeferredHolder<Block, Block> DEEPSLATE_PLATINUM_ORE = BLOCKS.register("deepslate_platinum_ore",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_COPPER_ORE)));
 
     private ModBlocks() {
     }

@@ -1,14 +1,25 @@
 {
   "itemGroup.supersteel.steel": "Steel",
   "block.supersteel.steel_block": "Steel Block",
+  "block.supersteel.platinum_ore": "Platinum Ore",
+  "block.supersteel.deepslate_platinum_ore": "Deepslate Platinum Ore",
   "item.supersteel.steel": "Steel",
   "item.supersteel.steel_sword": "Steel Sword",
   "item.supersteel.steel_pickaxe": "Steel Pickaxe",
   "item.supersteel.steel_axe": "Steel Axe",
   "item.supersteel.steel_shovel": "Steel Shovel",
   "item.supersteel.steel_hoe": "Steel Hoe",
+  "item.supersteel.copper_sword": "Copper Sword",
+  "item.supersteel.copper_pickaxe": "Copper Pickaxe",
+  "item.supersteel.copper_axe": "Copper Axe",
+  "item.supersteel.copper_shovel": "Copper Shovel",
+  "item.supersteel.copper_hoe": "Copper Hoe",
   "item.supersteel.steel_helmet": "Steel Helmet",
   "item.supersteel.steel_chestplate": "Steel Chestplate",
   "item.supersteel.steel_leggings": "Steel Leggings",
-  "item.supersteel.steel_boots": "Steel Boots"
+  "item.supersteel.steel_boots": "Steel Boots",
+  "item.supersteel.copper_helmet": "Copper Helmet",
+  "item.supersteel.copper_chestplate": "Copper Chestplate",
+  "item.supersteel.copper_leggings": "Copper Leggings",
+  "item.supersteel.copper_boots": "Copper Boots"
 }

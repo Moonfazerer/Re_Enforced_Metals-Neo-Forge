@@ -8,6 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -33,6 +34,21 @@ public final class ModArmorMaterials {
                     List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MOD_ID, "steel"))),
                     1.0F,
                     0.1F));
+    public static final DeferredHolder<ArmorMaterial, ArmorMaterial> COPPER = ARMOR_MATERIALS.register("copper",
+            () -> new ArmorMaterial(
+                    Util.make(new EnumMap<>(ArmorItem.Type.class), defense -> {
+                        defense.put(ArmorItem.Type.BOOTS, 2);
+                        defense.put(ArmorItem.Type.LEGGINGS, 5);
+                        defense.put(ArmorItem.Type.CHESTPLATE, 6);
+                        defense.put(ArmorItem.Type.HELMET, 2);
+                        defense.put(ArmorItem.Type.BODY, 5);
+                    }),
+                    9,
+                    SoundEvents.ARMOR_EQUIP_IRON,
+                    () -> Ingredient.of(Items.COPPER_INGOT),
+                    List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MOD_ID, "copper"))),
+                    0.0F,
+                    0.0F));
 
     private ModArmorMaterials() {
     }

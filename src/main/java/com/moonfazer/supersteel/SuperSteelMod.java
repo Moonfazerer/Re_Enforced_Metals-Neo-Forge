@@ -42,22 +42,33 @@ public final class SuperSteelMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModItems.STEEL_BLOCK.get());
+            event.accept(ModItems.PLATINUM_ORE.get());
+            event.accept(ModItems.DEEPSLATE_PLATINUM_ORE.get());
         }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.STEEL.get());
         }
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.STEEL_SWORD.get());
+            event.accept(ModItems.COPPER_SWORD.get());
             event.accept(ModItems.STEEL_HELMET.get());
             event.accept(ModItems.STEEL_CHESTPLATE.get());
             event.accept(ModItems.STEEL_LEGGINGS.get());
             event.accept(ModItems.STEEL_BOOTS.get());
+            event.accept(ModItems.COPPER_HELMET.get());
+            event.accept(ModItems.COPPER_CHESTPLATE.get());
+            event.accept(ModItems.COPPER_LEGGINGS.get());
+            event.accept(ModItems.COPPER_BOOTS.get());
         }
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.STEEL_PICKAXE.get());
             event.accept(ModItems.STEEL_AXE.get());
             event.accept(ModItems.STEEL_SHOVEL.get());
             event.accept(ModItems.STEEL_HOE.get());
+            event.accept(ModItems.COPPER_PICKAXE.get());
+            event.accept(ModItems.COPPER_AXE.get());
+            event.accept(ModItems.COPPER_SHOVEL.get());
+            event.accept(ModItems.COPPER_HOE.get());
         }
     }
 }

@@ -21,15 +21,27 @@ public final class ModCreativeTabs {
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.STEEL.get());
                         output.accept(ModItems.STEEL_BLOCK.get());
+                        output.accept(ModItems.PLATINUM_ORE.get());
+                        output.accept(ModItems.DEEPSLATE_PLATINUM_ORE.get());
                         output.accept(ModItems.STEEL_SWORD.get());
                         output.accept(ModItems.STEEL_PICKAXE.get());
                         output.accept(ModItems.STEEL_AXE.get());
                         output.accept(ModItems.STEEL_SHOVEL.get());
                         output.accept(ModItems.STEEL_HOE.get());
+                        output.accept(ModItems.COPPER_SWORD.get());
+                        output.accept(ModItems.COPPER_PICKAXE.get());
+                        output.accept(ModItems.COPPER_AXE.get());
+                        output.accept(ModItems.COPPER_SHOVEL.get());
+                        output.accept(ModItems.COPPER_HOE.get());
                         output.accept(ModItems.STEEL_HELMET.get());
                         output.accept(ModItems.STEEL_CHESTPLATE.get());
                         output.accept(ModItems.STEEL_LEGGINGS.get());
                         output.accept(ModItems.STEEL_BOOTS.get());
+                        output.accept(ModItems.COPPER_HELMET.get());
+                        output.accept(ModItems.COPPER_CHESTPLATE.get());
+                        output.accept(ModItems.COPPER_LEGGINGS.get());
+                        output.accept(ModItems.COPPER_BOOTS.get());
+                        output.accept(ModItems.PLATINUM.get());
                     })
                     .build());
 
