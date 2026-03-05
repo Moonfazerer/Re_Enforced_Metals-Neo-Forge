@@ -20,6 +20,8 @@ public final class ModCreativeTabs {
                     .icon(() -> ModItems.STEEL.get().getDefaultInstance())
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.STEEL.get());
+                        output.accept(ModItems.RAW_PLATINUM.get());
+                        output.accept(ModItems.PLATINUM.get());
                         output.accept(ModItems.STEEL_BLOCK.get());
                         output.accept(ModItems.PLATINUM_ORE.get());
                         output.accept(ModItems.DEEPSLATE_PLATINUM_ORE.get());
@@ -41,7 +43,10 @@ public final class ModCreativeTabs {
                         output.accept(ModItems.COPPER_CHESTPLATE.get());
                         output.accept(ModItems.COPPER_LEGGINGS.get());
                         output.accept(ModItems.COPPER_BOOTS.get());
-                        output.accept(ModItems.PLATINUM.get());
+                        output.accept(ModItems.PLATINUM_HELMET.get());
+                        output.accept(ModItems.PLATINUM_CHESTPLATE.get());
+                        output.accept(ModItems.PLATINUM_LEGGINGS.get());
+                        output.accept(ModItems.PLATINUM_BOOTS.get());
                     })
                     .build());
 

@@ -7,12 +7,17 @@ import com.moonfazer.supersteel.registry.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import org.slf4j.Logger;
 
 @Mod(SuperSteelMod.MOD_ID)
@@ -27,6 +32,7 @@ public final class SuperSteelMod {
         ModCreativeTabs.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::addCreative);
+        NeoForge.EVENT_BUS.addListener(this::onPlayerTick);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
@@ -47,6 +53,8 @@ public final class SuperSteelMod {
         }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.STEEL.get());
+            event.accept(ModItems.RAW_PLATINUM.get());
+            event.accept(ModItems.PLATINUM.get());
         }
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.STEEL_SWORD.get());
@@ -59,6 +67,10 @@ public final class SuperSteelMod {
             event.accept(ModItems.COPPER_CHESTPLATE.get());
             event.accept(ModItems.COPPER_LEGGINGS.get());
             event.accept(ModItems.COPPER_BOOTS.get());
+            event.accept(ModItems.PLATINUM_HELMET.get());
+            event.accept(ModItems.PLATINUM_CHESTPLATE.get());
+            event.accept(ModItems.PLATINUM_LEGGINGS.get());
+            event.accept(ModItems.PLATINUM_BOOTS.get());
         }
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.STEEL_PICKAXE.get());
@@ -69,6 +81,31 @@ public final class SuperSteelMod {
             event.accept(ModItems.COPPER_AXE.get());
             event.accept(ModItems.COPPER_SHOVEL.get());
             event.accept(ModItems.COPPER_HOE.get());
+        }
+    }
+
+    private void onPlayerTick(PlayerTickEvent.Post event) {
+        var player = event.getEntity();
+        if (player.level().isClientSide) {
+            return;
+        }
+
+        int platinumPieces = 0;
+        if (player.getItemBySlot(EquipmentSlot.HEAD).is(ModItems.PLATINUM_HELMET.get())) {
+            platinumPieces++;
+        }
+        if (player.getItemBySlot(EquipmentSlot.CHEST).is(ModItems.PLATINUM_CHESTPLATE.get())) {
+            platinumPieces++;
+        }
+        if (player.getItemBySlot(EquipmentSlot.LEGS).is(ModItems.PLATINUM_LEGGINGS.get())) {
+            platinumPieces++;
+        }
+        if (player.getItemBySlot(EquipmentSlot.FEET).is(ModItems.PLATINUM_BOOTS.get())) {
+            platinumPieces++;
+        }
+
+        if (platinumPieces > 0) {
+            player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, platinumPieces - 1, false, false, true));
         }
     }
 }

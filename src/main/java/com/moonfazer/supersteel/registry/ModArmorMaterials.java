@@ -49,6 +49,21 @@ public final class ModArmorMaterials {
                     List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MOD_ID, "copper"))),
                     0.0F,
                     0.0F));
+    public static final DeferredHolder<ArmorMaterial, ArmorMaterial> PLATINUM = ARMOR_MATERIALS.register("platinum",
+            () -> new ArmorMaterial(
+                    Util.make(new EnumMap<>(ArmorItem.Type.class), defense -> {
+                        defense.put(ArmorItem.Type.BOOTS, 3);
+                        defense.put(ArmorItem.Type.LEGGINGS, 6);
+                        defense.put(ArmorItem.Type.CHESTPLATE, 8);
+                        defense.put(ArmorItem.Type.HELMET, 3);
+                        defense.put(ArmorItem.Type.BODY, 6);
+                    }),
+                    15,
+                    SoundEvents.ARMOR_EQUIP_DIAMOND,
+                    () -> Ingredient.of(ModItems.PLATINUM.get()),
+                    List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MOD_ID, "platinum"))),
+                    2.0F,
+                    0.0F));
 
     private ModArmorMaterials() {
     }

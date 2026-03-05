@@ -3,6 +3,8 @@
   "block.supersteel.steel_block": "Steel Block",
   "block.supersteel.platinum_ore": "Platinum Ore",
   "block.supersteel.deepslate_platinum_ore": "Deepslate Platinum Ore",
+  "item.supersteel.raw_platinum": "Raw Platinum",
+  "item.supersteel.platinum": "Platinum",
   "item.supersteel.steel": "Steel",
   "item.supersteel.steel_sword": "Steel Sword",
   "item.supersteel.steel_pickaxe": "Steel Pickaxe",
@@ -21,5 +23,9 @@
   "item.supersteel.copper_helmet": "Copper Helmet",
   "item.supersteel.copper_chestplate": "Copper Chestplate",
   "item.supersteel.copper_leggings": "Copper Leggings",
-  "item.supersteel.copper_boots": "Copper Boots"
+  "item.supersteel.copper_boots": "Copper Boots",
+  "item.supersteel.platinum_helmet": "Platinum Helmet",
+  "item.supersteel.platinum_chestplate": "Platinum Chestplate",
+  "item.supersteel.platinum_leggings": "Platinum Leggings",
+  "item.supersteel.platinum_boots": "Platinum Boots"
 }

@@ -21,6 +21,7 @@ public final class ModBlocks {
                     .sound(SoundType.METAL)));
     public static final DeferredHolder<Block, Block> PLATINUM_ORE = BLOCKS.register("platinum_ore",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_ORE)));
+
     public static final DeferredHolder<Block, Block> DEEPSLATE_PLATINUM_ORE = BLOCKS.register("deepslate_platinum_ore",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_COPPER_ORE)));
 
