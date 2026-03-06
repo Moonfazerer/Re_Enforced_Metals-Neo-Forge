@@ -23,6 +23,14 @@ public final class ModToolTiers {
             10,
             () -> Ingredient.of(Items.COPPER_INGOT)
     );
+    public static final Tier PLATINUM = new SimpleTier(
+            BlockTags.INCORRECT_FOR_DIAMOND_TOOL,
+            1750,
+            8.5F,
+            4.0F,
+            18,
+            () -> Ingredient.of(ModItems.PLATINUM.get())
+    );
 
     private ModToolTiers() {
     }

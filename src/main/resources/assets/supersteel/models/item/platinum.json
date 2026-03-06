@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "supersteel:item/steel_ingot"
+    "layer0": "supersteel:item/platinum"
   }
 }

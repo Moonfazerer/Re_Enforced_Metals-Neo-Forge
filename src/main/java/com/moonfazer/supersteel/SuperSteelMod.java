@@ -2,8 +2,14 @@ package com.moonfazer.supersteel;
 
 import com.moonfazer.supersteel.registry.ModBlocks;
 import com.moonfazer.supersteel.registry.ModArmorMaterials;
+import com.moonfazer.supersteel.registry.ModCopperArmorItems;
 import com.moonfazer.supersteel.registry.ModCreativeTabs;
 import com.moonfazer.supersteel.registry.ModItems;
+import com.moonfazer.supersteel.registry.ModPlatinumArmorItems;
+import com.moonfazer.supersteel.registry.ModPlatinumToolItems;
+import com.moonfazer.supersteel.registry.ModSteelArmorItems;
+import com.moonfazer.supersteel.registry.ModSteelToolItems;
+import com.moonfazer.supersteel.registry.ModCopperToolItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -29,6 +35,12 @@ public final class SuperSteelMod {
         ModArmorMaterials.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
+        ModSteelToolItems.register(modEventBus);
+        ModCopperToolItems.register(modEventBus);
+        ModPlatinumToolItems.register(modEventBus);
+        ModSteelArmorItems.register(modEventBus);
+        ModCopperArmorItems.register(modEventBus);
+        ModPlatinumArmorItems.register(modEventBus);
         ModCreativeTabs.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::addCreative);
@@ -57,30 +69,35 @@ public final class SuperSteelMod {
             event.accept(ModItems.PLATINUM.get());
         }
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
-            event.accept(ModItems.STEEL_SWORD.get());
-            event.accept(ModItems.COPPER_SWORD.get());
-            event.accept(ModItems.STEEL_HELMET.get());
-            event.accept(ModItems.STEEL_CHESTPLATE.get());
-            event.accept(ModItems.STEEL_LEGGINGS.get());
-            event.accept(ModItems.STEEL_BOOTS.get());
-            event.accept(ModItems.COPPER_HELMET.get());
-            event.accept(ModItems.COPPER_CHESTPLATE.get());
-            event.accept(ModItems.COPPER_LEGGINGS.get());
-            event.accept(ModItems.COPPER_BOOTS.get());
-            event.accept(ModItems.PLATINUM_HELMET.get());
-            event.accept(ModItems.PLATINUM_CHESTPLATE.get());
-            event.accept(ModItems.PLATINUM_LEGGINGS.get());
-            event.accept(ModItems.PLATINUM_BOOTS.get());
+            event.accept(ModSteelToolItems.SWORD.get());
+            event.accept(ModCopperToolItems.SWORD.get());
+            event.accept(ModPlatinumToolItems.SWORD.get());
+            event.accept(ModSteelArmorItems.HELMET.get());
+            event.accept(ModSteelArmorItems.CHESTPLATE.get());
+            event.accept(ModSteelArmorItems.LEGGINGS.get());
+            event.accept(ModSteelArmorItems.BOOTS.get());
+            event.accept(ModCopperArmorItems.HELMET.get());
+            event.accept(ModCopperArmorItems.CHESTPLATE.get());
+            event.accept(ModCopperArmorItems.LEGGINGS.get());
+            event.accept(ModCopperArmorItems.BOOTS.get());
+            event.accept(ModPlatinumArmorItems.HELMET.get());
+            event.accept(ModPlatinumArmorItems.CHESTPLATE.get());
+            event.accept(ModPlatinumArmorItems.LEGGINGS.get());
+            event.accept(ModPlatinumArmorItems.BOOTS.get());
         }
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.accept(ModItems.STEEL_PICKAXE.get());
-            event.accept(ModItems.STEEL_AXE.get());
-            event.accept(ModItems.STEEL_SHOVEL.get());
-            event.accept(ModItems.STEEL_HOE.get());
-            event.accept(ModItems.COPPER_PICKAXE.get());
-            event.accept(ModItems.COPPER_AXE.get());
-            event.accept(ModItems.COPPER_SHOVEL.get());
-            event.accept(ModItems.COPPER_HOE.get());
+            event.accept(ModSteelToolItems.PICKAXE.get());
+            event.accept(ModSteelToolItems.AXE.get());
+            event.accept(ModSteelToolItems.SHOVEL.get());
+            event.accept(ModSteelToolItems.HOE.get());
+            event.accept(ModCopperToolItems.PICKAXE.get());
+            event.accept(ModCopperToolItems.AXE.get());
+            event.accept(ModCopperToolItems.SHOVEL.get());
+            event.accept(ModCopperToolItems.HOE.get());
+            event.accept(ModPlatinumToolItems.PICKAXE.get());
+            event.accept(ModPlatinumToolItems.AXE.get());
+            event.accept(ModPlatinumToolItems.SHOVEL.get());
+            event.accept(ModPlatinumToolItems.HOE.get());
         }
     }
 
@@ -91,16 +108,16 @@ public final class SuperSteelMod {
         }
 
         int platinumPieces = 0;
-        if (player.getItemBySlot(EquipmentSlot.HEAD).is(ModItems.PLATINUM_HELMET.get())) {
+        if (player.getItemBySlot(EquipmentSlot.HEAD).is(ModPlatinumArmorItems.HELMET.get())) {
             platinumPieces++;
         }
-        if (player.getItemBySlot(EquipmentSlot.CHEST).is(ModItems.PLATINUM_CHESTPLATE.get())) {
+        if (player.getItemBySlot(EquipmentSlot.CHEST).is(ModPlatinumArmorItems.CHESTPLATE.get())) {
             platinumPieces++;
         }
-        if (player.getItemBySlot(EquipmentSlot.LEGS).is(ModItems.PLATINUM_LEGGINGS.get())) {
+        if (player.getItemBySlot(EquipmentSlot.LEGS).is(ModPlatinumArmorItems.LEGGINGS.get())) {
             platinumPieces++;
         }
-        if (player.getItemBySlot(EquipmentSlot.FEET).is(ModItems.PLATINUM_BOOTS.get())) {
+        if (player.getItemBySlot(EquipmentSlot.FEET).is(ModPlatinumArmorItems.BOOTS.get())) {
             platinumPieces++;
         }
 

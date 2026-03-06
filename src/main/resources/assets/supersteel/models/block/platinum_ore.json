@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "minecraft:coal_ore"
+    "all": "supersteel:platinum_ore"
   }
 }
