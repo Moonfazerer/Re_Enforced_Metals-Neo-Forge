@@ -3,14 +3,14 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:gold_ingot"
     },
     {
-      "item": "minecraft:coal"
+      "item": "minecraft:copper_ingot"
     }
   ],
   "result": {
-    "id": "supersteel:steel",
-    "count": 1
+    "id": "supersteel:rose_gold",
+    "count": 2
   }
 }

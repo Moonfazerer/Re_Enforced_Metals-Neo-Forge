@@ -2,10 +2,10 @@
   "type": "minecraft:blasting",
   "category": "misc",
   "ingredient": {
-    "item": "minecraft:iron_ingot"
+    "item": "supersteel:raw_platinum"
   },
   "result": {
-    "id": "supersteel:steel"
+    "id": "supersteel:platinum_ingot"
   },
   "experience": 0.7,
   "cookingtime": 100

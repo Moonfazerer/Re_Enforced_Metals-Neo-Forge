@@ -10,6 +10,8 @@ import com.moonfazer.supersteel.registry.ModPlatinumToolItems;
 import com.moonfazer.supersteel.registry.ModSteelArmorItems;
 import com.moonfazer.supersteel.registry.ModSteelToolItems;
 import com.moonfazer.supersteel.registry.ModCopperToolItems;
+import com.moonfazer.supersteel.registry.ModRoseGoldArmorItems;
+import com.moonfazer.supersteel.registry.ModRoseGoldToolItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -38,9 +40,11 @@ public final class SuperSteelMod {
         ModSteelToolItems.register(modEventBus);
         ModCopperToolItems.register(modEventBus);
         ModPlatinumToolItems.register(modEventBus);
+        ModRoseGoldToolItems.register(modEventBus);
         ModSteelArmorItems.register(modEventBus);
         ModCopperArmorItems.register(modEventBus);
         ModPlatinumArmorItems.register(modEventBus);
+        ModRoseGoldArmorItems.register(modEventBus);
         ModCreativeTabs.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::addCreative);
@@ -64,26 +68,35 @@ public final class SuperSteelMod {
             event.accept(ModItems.DEEPSLATE_PLATINUM_ORE.get());
         }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.STEEL.get());
+            event.accept(ModItems.STEEL_INGOT.get());
             event.accept(ModItems.RAW_PLATINUM.get());
-            event.accept(ModItems.PLATINUM.get());
+            event.accept(ModItems.PLATINUM_INGOT.get());
         }
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModSteelToolItems.SWORD.get());
             event.accept(ModCopperToolItems.SWORD.get());
             event.accept(ModPlatinumToolItems.SWORD.get());
+            event.accept(ModRoseGoldToolItems.SWORD.get());
+
             event.accept(ModSteelArmorItems.HELMET.get());
             event.accept(ModSteelArmorItems.CHESTPLATE.get());
             event.accept(ModSteelArmorItems.LEGGINGS.get());
             event.accept(ModSteelArmorItems.BOOTS.get());
+
             event.accept(ModCopperArmorItems.HELMET.get());
             event.accept(ModCopperArmorItems.CHESTPLATE.get());
             event.accept(ModCopperArmorItems.LEGGINGS.get());
             event.accept(ModCopperArmorItems.BOOTS.get());
+
             event.accept(ModPlatinumArmorItems.HELMET.get());
             event.accept(ModPlatinumArmorItems.CHESTPLATE.get());
             event.accept(ModPlatinumArmorItems.LEGGINGS.get());
             event.accept(ModPlatinumArmorItems.BOOTS.get());
+
+            event.accept(ModRoseGoldArmorItems.HELMET.get());
+            event.accept(ModRoseGoldArmorItems.CHESTPLATE.get());
+            event.accept(ModRoseGoldArmorItems.LEGGINGS.get());
+            event.accept(ModRoseGoldArmorItems.BOOTS.get());
         }
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModSteelToolItems.PICKAXE.get());
@@ -98,6 +111,10 @@ public final class SuperSteelMod {
             event.accept(ModPlatinumToolItems.AXE.get());
             event.accept(ModPlatinumToolItems.SHOVEL.get());
             event.accept(ModPlatinumToolItems.HOE.get());
+            event.accept(ModRoseGoldToolItems.PICKAXE.get());
+            event.accept(ModRoseGoldToolItems.AXE.get());
+            event.accept(ModRoseGoldToolItems.SHOVEL.get());
+            event.accept(ModRoseGoldToolItems.HOE.get());
         }
     }
 

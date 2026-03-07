@@ -19,6 +19,13 @@ public final class ModBlocks {
                     .strength(5.0F, 3_600_000.0F)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.METAL)));
+
+    public static final DeferredHolder<Block, Block> ROSE_GOLD_BLOCK = BLOCKS.register("rose_gold_block",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GOLD_BLOCK)));
+
+    public static final DeferredHolder<Block, Block> PLATINUM_BLOCK = BLOCKS.register("platinum_block",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REINFORCED_DEEPSLATE)));
+
     public static final DeferredHolder<Block, Block> PLATINUM_ORE = BLOCKS.register("platinum_ore",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_ORE)));
 

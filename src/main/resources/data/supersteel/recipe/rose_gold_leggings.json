@@ -1,18 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "building",
+  "category": "equipment",
   "pattern": [
     "###",
-    "###",
-    "###"
+    "# #",
+    "# #"
   ],
   "key": {
     "#": {
-      "item": "supersteel:steel"
+      "item": "supersteel:rose_gold"
     }
   },
   "result": {
-    "id": "supersteel:steel_block",
+    "id": "supersteel:rose_gold_leggings",
     "count": 1
   }
 }

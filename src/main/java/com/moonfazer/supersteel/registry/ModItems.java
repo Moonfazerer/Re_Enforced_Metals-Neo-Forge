@@ -16,6 +16,12 @@ public final class ModItems {
     public static final DeferredHolder<Item, Item> STEEL_BLOCK = ITEMS.register("steel_block",
             () -> new BlockItem(ModBlocks.STEEL_BLOCK.get(), new Item.Properties()));
 
+    public static final DeferredHolder<Item, Item> ROSE_GOLD_BLOCK = ITEMS.register("rose_gold_block",
+            () -> new BlockItem(ModBlocks.ROSE_GOLD_BLOCK.get(), new Item.Properties()));
+
+    public static final DeferredHolder<Item, Item> PLATINUM_BLOCK = ITEMS.register("platinum_block",
+            () -> new BlockItem(ModBlocks.PLATINUM_BLOCK.get(), new Item.Properties()));
+
     public static final DeferredHolder<Item, Item> PLATINUM_ORE = ITEMS.register("platinum_ore",
             () -> new BlockItem(ModBlocks.PLATINUM_ORE.get(), new Item.Properties()));
 
@@ -24,10 +30,13 @@ public final class ModItems {
     public static final DeferredHolder<Item, Item> RAW_PLATINUM = ITEMS.register("raw_platinum",
             () -> new Item(new Item.Properties()));
 
-    public static final DeferredHolder<Item, Item> STEEL = ITEMS.register("steel",
+    public static final DeferredHolder<Item, Item> STEEL_INGOT = ITEMS.register("steel_ingot",
             () -> new Item(new Item.Properties()));
 
-    public static final DeferredHolder<Item, Item> PLATINUM = ITEMS.register("platinum",
+    public static final DeferredHolder<Item, Item> ROSE_GOLD = ITEMS.register("rose_gold",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredHolder<Item, Item> PLATINUM_INGOT = ITEMS.register("platinum_ingot",
             () -> new Item(new Item.Properties()));
 
     private ModItems() {

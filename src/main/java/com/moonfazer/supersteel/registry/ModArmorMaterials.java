@@ -30,7 +30,7 @@ public final class ModArmorMaterials {
                     }),
                     9,
                     SoundEvents.ARMOR_EQUIP_IRON,
-                    () -> Ingredient.of(ModItems.STEEL.get()),
+                    () -> Ingredient.of(ModItems.STEEL_INGOT.get()),
                     List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MOD_ID, "steel"))),
                     1.0F,
                     0.1F));
@@ -60,9 +60,24 @@ public final class ModArmorMaterials {
                     }),
                     15,
                     SoundEvents.ARMOR_EQUIP_DIAMOND,
-                    () -> Ingredient.of(ModItems.PLATINUM.get()),
+                    () -> Ingredient.of(ModItems.PLATINUM_INGOT.get()),
                     List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MOD_ID, "platinum"))),
                     2.0F,
+                    0.0F));
+    public static final DeferredHolder<ArmorMaterial, ArmorMaterial> ROSE_GOLD = ARMOR_MATERIALS.register("rose_gold",
+            () -> new ArmorMaterial(
+                    Util.make(new EnumMap<>(ArmorItem.Type.class), defense -> {
+                        defense.put(ArmorItem.Type.BOOTS, 2);
+                        defense.put(ArmorItem.Type.LEGGINGS, 4);
+                        defense.put(ArmorItem.Type.CHESTPLATE, 5);
+                        defense.put(ArmorItem.Type.HELMET, 2);
+                        defense.put(ArmorItem.Type.BODY, 6);
+                    }),
+                    15,
+                    SoundEvents.ARMOR_EQUIP_GOLD,
+                    () -> Ingredient.of(ModItems.ROSE_GOLD.get()),
+                    List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MOD_ID, "rose_gold"))),
+                    0.0F,
                     0.0F));
 
     private ModArmorMaterials() {

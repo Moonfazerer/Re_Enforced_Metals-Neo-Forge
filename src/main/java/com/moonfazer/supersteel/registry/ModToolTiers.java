@@ -13,7 +13,7 @@ public final class ModToolTiers {
             7.0F,
             3.0F,
             14,
-            () -> Ingredient.of(ModItems.STEEL.get())
+            () -> Ingredient.of(ModItems.STEEL_INGOT.get())
     );
     public static final Tier COPPER = new SimpleTier(
             BlockTags.INCORRECT_FOR_IRON_TOOL,
@@ -29,7 +29,15 @@ public final class ModToolTiers {
             8.5F,
             4.0F,
             18,
-            () -> Ingredient.of(ModItems.PLATINUM.get())
+            () -> Ingredient.of(ModItems.PLATINUM_INGOT.get())
+    );
+    public static final Tier ROSE_GOLD = new SimpleTier(
+            BlockTags.INCORRECT_FOR_GOLD_TOOL,
+            220,
+            12.0F,
+            0.0F,
+            22,
+            () -> Ingredient.of(ModItems.ROSE_GOLD.get())
     );
 
     private ModToolTiers() {
